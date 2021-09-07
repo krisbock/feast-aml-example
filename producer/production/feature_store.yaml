@@ -1,0 +1,8 @@
+project: production
+registry: az://registry-container/registry_directory/registry.db
+provider: local
+offline_store:
+  type: sqlserver
+online_store:
+  type: redis
+  redis_type: redis  

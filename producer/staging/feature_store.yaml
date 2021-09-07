@@ -1,0 +1,8 @@
+project: staging
+registry: registry/registry.db
+provider: local
+offline_store:
+  type: sqlserver
+online_store:
+  type: redis
+  redis_type: redis  

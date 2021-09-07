@@ -1,0 +1,7 @@
+git+https://github.com/samuel100/feast.git@samuel100-azregstore#egg=feast&subdirectory=sdk/python
+pyodbc
+redis
+redis-py-cluster
+sqlalchemy
+pymssql
+azure-storage-blob

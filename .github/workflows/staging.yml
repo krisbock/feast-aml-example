@@ -1,0 +1,26 @@
+name: staging
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - producer/production/**
+      - .github/**
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    env:
+      FEAST_VERSION: "0.11.0"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+      - name: Install Feast and requirements
+        run: pip install -r requirements.txt
+      - name: Update Feature Store Infrastructure
+        run: |
+          cd producer/staging
+          feast apply
