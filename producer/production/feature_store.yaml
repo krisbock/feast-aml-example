@@ -1,5 +1,5 @@
 project: production
-registry: az://registry-container/registry_directory/registry.db
+registry: az://msmls9093850258/azureml-blobstore-c96ff9a0-71e5-4401-921d-660ad6b6335a/registry.db
 provider: local
 offline_store:
   type: sqlserver
