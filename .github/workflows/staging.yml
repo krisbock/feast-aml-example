@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FEAST_VERSION: "0.11.0"
+      FEAST_AZ_STORAGE_CONNECTION_STRING: ${{ secrets.FEAST_AZ_STORAGE_CONNECTION_STRING }
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python
